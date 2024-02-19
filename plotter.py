@@ -49,9 +49,9 @@ a2_xyz = [4.23,4.50,1.38]
 a3_xyz = [4.28,1.18,2.51]
 
 # Using readlines()
-# datalog = open('t0_log_20240212115833.txt', 'r')  # point test p(3.68, 1.04,0.50)
-# datalog = open('t0_log_20240212121046.txt', 'r')    # square test
-datalog = open('t0_log_20240212132303.txt', 'r')    # point test p(3.68, 3.40,1.05)
+# datalog = open('log/t0_log_20240212115833.txt', 'r')  # point test p(3.68, 1.04,0.50)
+# datalog = open('log/t0_log_20240212121046.txt', 'r')    # square test
+datalog = open('log/t0_log_20240212132303.txt', 'r')    # point test p(3.68, 3.40,1.05)
 data_lines = datalog.readlines()
 
 # Strips the newline character

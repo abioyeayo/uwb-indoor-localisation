@@ -20,7 +20,7 @@ port = "/dev/cu.usbmodem52870207291"
 baud = 115200
 
 ser = serial.Serial(port, baud, timeout=1)
-filename = 't0_log_' + datetime.now().strftime("%Y%m%d%H%M%S") + '.txt'
+filename = 'log/t0_log_' + datetime.now().strftime("%Y%m%d%H%M%S") + '.txt'
 f = open(filename,'a')
 f.write(datetime.utcnow().isoformat() + '\n')
 f.flush()
@@ -115,44 +115,3 @@ ani = animation.FuncAnimation(fig, animate, frames=100, fargs=(f, ser, x_data, y
 
 plt.show()                                              # Keep Matplotlib plot persistent on screen until it is closed
 ser.close()   
-
-
-# # Strips the newline character
-# for data_line in data_lines:
-#     if data_line[0:5] == "(x,y)":
-#         # print(data_line)
-#         data_str = data_line[9:-2]
-#         data_str_array = data_str.split(',')
-#         x_data.append(float(data_str_array[0]))
-#         y_data.append(float(data_str_array[1]))
-
-# # # print(x_data)
-# # # print(y_data)
-
-# # plt.plot(x_data, y_data, 'o')
-# # plt.xlim(-1, 3)
-# # plt.ylim(-1, 2)
-# # plt.title("UWB Tag tracking")
-# # plt.xlabel("x-axis")
-# # plt.ylabel("y-axis")
-# # plt.show()
-
-# # plt.scatter(2, 5)
-
-# fig, ax = plt.subplots()
-# point, = ax.plot(x_data, y_data, 'o')
-# line, = ax.plot(x_data, y_data)
-
-# def update(num, x_data, y_data, point, line):
-#     point.set_data(x_data[num], y_data[num])
-#     line.set_data(x_data[:num], y_data[:num])
-#     # if num > 3 :
-#     #     line.set_data(x_data[num-3:num], y_data[num-3:num])
-#     # else:
-#     #     line.set_data(x_data[:num], y_data[:num])
-#     return line,
-
-# ani = animation.FuncAnimation(fig, update, len(x_data), interval=100, 
-#                               fargs=[x_data, y_data, point, line], blit=True)
-# # ani.save('animation_drawing.gif', writer='imagemagick', fps=60)
-# plt.show()
