@@ -248,6 +248,7 @@ for i in range(len(a0_data)):
 plt.figure()
 plt.plot(nx_data, ny_data, 'o')
 # plt.plot(ny_data, nz_data, 'o')
+plt.plot([a0_xyz[0],a1_xyz[0],a2_xyz[0],a3_xyz[0],a0_xyz[0]],[a0_xyz[1],a1_xyz[1],a2_xyz[1],a3_xyz[1],a0_xyz[1]], '-*')
 plt.xlim(-1, 6)
 plt.ylim(-1, 6)
 plt.title("UWB Tag tracking - filtered data")
